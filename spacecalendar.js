@@ -5,13 +5,10 @@ document.getElementById('datesearch', 'year', 'month', 'day').addEventListener('
    var month= document.getElementById('month').value;
    var day  = document.getElementById('day').value;
    var calendar1 = (year + "-" + month + "-"+ day);
-    console.log(dateget(calendar1));
-
-                   dateget(calendar1);
+    dateget(calendar1);
 
 });
 
-//  var TestVar = form.inputbox.value;
 function dateget(date){
 
   var xhr = new XMLHttpRequest();
@@ -36,13 +33,36 @@ function dateget(date){
   return xhr.response;
 
 }
+var max = 2016,
+    min = 1998,
+    select = document.getElementById('year');
 
-// this function takes the results object from StackOverflow
-// and returns the number of results and tags to be appended to DOM
-//var showSearchResults = function(query, resultNum) {
-//    var results = resultNum + ' results for <strong>' + query + '</strong>';
-//    return results;
-//};
+for (var i = max; i >= min; i--) {
+  var opt = document.createElement('option');
+  opt.value = i;
+  opt.innerHTML = i;
+  select.appendChild(opt);
+}
 
-// takes a string from input and searches
-// for unaswered questions on StackOverflow API.
+// The following functions create options for Year, Month and Day.
+
+var max = 31,
+    min = 1,
+    select = document.getElementById('day');
+
+for (var i = min; i <= max; i++) {
+  var opt = document.createElement('option');
+  opt.value = i;
+  opt.innerHTML = i;
+  select.appendChild(opt);
+}
+
+var mon = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  select = document.getElementById('month');
+
+for (var i = 0; i < mon.length; i++) {
+  var opt = document.createElement('option');
+  opt.value = i;
+  opt.innerHTML = mon[i];
+  select.appendChild(opt);
+}
