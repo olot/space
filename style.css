@@ -1,0 +1,95 @@
+body	{
+  margin: 0;
+	background-image: url("images/stars.jpg");
+	background-position: 0px 0px;
+	background-repeat: repeat;
+
+	animation: animatedBackground 40s linear infinite;
+}
+
+* {
+  color: #ffffff;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+.datebutton {
+  background-color: #ffffff;
+}
+
+.grid-container {
+}
+
+.solid-color {
+    background-color: #fff;
+    min-height: 300px;
+}
+
+.datebutton h3 {
+  margin-top: 0px;
+}
+
+#dateselector .col-12{
+  padding-top: 0px;
+}
+
+.container2 {
+    margin: 30px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 25px;
+    opacity: 0.2;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+
+}
+
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
+img {
+  width: 50px;
+	height: 50px;
+  position: relative;
+}
+
+
+#explanation {
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 0;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	font-weight: bold;
+	text-align: justify;
+	overflow: hidden;
+	transform-origin: 50% 100%;
+	transform: perspective(300px) rotateX(25deg);
+}
+
+#explanation:after
+{
+	position: absolute;
+	content: ' ';
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 60%;
+	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
+	pointer-events: none;
+}
+
+
+#explanation {
+	position: absolute;
+	top: 100%;
+	animation: scroll 100s linear 4s infinite;
+}
+
+
+@keyframes scroll {
+	0% { top: 100%; }
+	100% { top: -170%; }
+}
