@@ -1,9 +1,14 @@
-document.getElementById('datesearch').addEventListener('submit',function(e){
+document.getElementById('datesearch', 'year', 'month', 'day').addEventListener('submit',function(e){
    e.preventDefault();
    document.getElementById('results').innerHTML += "This is the space picture for your date!!!";
-   var calendar1 = document.querySelector('#datesearch input[type="text"]').value;
-   dateget(calendar1);
-   console.log(dateget(calendar1));
+   var year = document.getElementById('year').value;
+   var month= document.getElementById('month').value;
+   var day  = document.getElementById('day').value;
+   var calendar1 = (year + "-" + month + "-"+ day);
+    console.log(dateget(calendar1));
+
+                   dateget(calendar1);
+
 });
 
 //  var TestVar = form.inputbox.value;
