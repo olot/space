@@ -1,4 +1,4 @@
-document.getElementById('datesearch', 'year', 'month', 'day').addEventListener('submit',function(e){
+document.getElementById('datesearch', 'year', 'month', 'day').addEventListener("submit",function(e){
    e.preventDefault();
    document.getElementsByClassName('container2')[0].classList.add('toggle');
    document.getElementById('results').innerHTML += "This is the space picture for your date!!!";
@@ -7,6 +7,7 @@ document.getElementById('datesearch', 'year', 'month', 'day').addEventListener('
    var day  = document.getElementById('day').value;
    var calendar1 = (year + "-" + month + "-"+ day);
     dateget(calendar1);
+    console.log(dateget(calendar));
 
 });
 
@@ -14,7 +15,7 @@ function dateget(date){
 
   var xhr = new XMLHttpRequest();
 
-  xhr.open("GET", "https://api.nasa.gov/planetary/apod?date="+ date + keys.nasa, true);
+  xhr.open("GET", "https://api.nasa.gov/planetary/apod?date="+ date + key.nasa, true);
 
 
   xhr.onload = function (e) {
