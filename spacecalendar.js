@@ -12,6 +12,7 @@ document.getElementById('datesearch', 'year', 'month', 'day').addEventListener('
 function dateget(date){
 
   var xhr = new XMLHttpRequest();
+
   xhr.open("GET", "https://api.nasa.gov/planetary/apod?date="+ date + keys.nasa, true);
 
   xhr.onload = function (e) {
