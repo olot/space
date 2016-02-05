@@ -15,6 +15,7 @@ function dateget(date){
 
   xhr.open("GET", "https://api.nasa.gov/planetary/apod?date="+ date + keys.nasa, true);
 
+
   xhr.onload = function (e) {
       if (xhr.readyState === 4 && xhr.status === 200) {
           var response = JSON.parse(xhr.responseText);
