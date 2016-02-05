@@ -40,14 +40,23 @@ body	{
   padding-top: 0px;
 }
 
+
+
 .container2 {
     margin: 300px 100px 30px 100px;
     background-color: #ffffff;
     border: none;
     border-radius: 25px;
-    opacity: 0.2;
+    opacity: 0;
     filter: alpha(opacity=60); /* For IE8 and earlier */
 
+}
+
+.toggle{
+
+  opacity: 0.2;
+  webkit-transition: opacity 1s;
+  transition: opacity 1s;
 }
 
 @keyframes animatedBackground {

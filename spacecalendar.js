@@ -1,5 +1,6 @@
 document.getElementById('datesearch', 'year', 'month', 'day').addEventListener('submit',function(e){
    e.preventDefault();
+   document.getElementsByClassName('container2')[0].classList.add('toggle');
    document.getElementById('results').innerHTML += "This is the space picture for your date!!!";
    var year = document.getElementById('year').value;
    var month= document.getElementById('month').value;
