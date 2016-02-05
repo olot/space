@@ -8,20 +8,28 @@ body	{
 }
 
 * {
-  color: #ffffff;
+  color: black;
   font-family: 'Droid Sans', sans-serif;
 }
 
 .datebutton {
-  background-color: #ffffff;
+
 }
 
 .grid-container {
+  padding-top: 70px;
 }
 
 .solid-color {
-    background-color: #fff;
-    min-height: 300px;
+    background-image: url("images/moon.jpg");
+    border-radius: 50%;
+    z-index: -1;
+    position: absolute;
+    width: 65%;
+    margin-left: 18%;
+    margin-top: -400px;
+    height: 800px;
+    background-size: 95%;
 }
 
 .datebutton h3 {
@@ -33,7 +41,7 @@ body	{
 }
 
 .container2 {
-    margin: 30px;
+    margin: 300px 100px 30px 100px;
     background-color: #ffffff;
     border: none;
     border-radius: 25px;
@@ -48,48 +56,7 @@ body	{
 }
 
 img {
-  width: 50px;
-	height: 50px;
+  width: 800px;
+	height: 800px;
   position: relative;
-}
-
-
-#explanation {
-	position: absolute;
-	width: 18em;
-	height: 50em;
-	bottom: 0;
-	left: 50%;
-	margin-left: -9em;
-	font-size: 350%;
-	font-weight: bold;
-	text-align: justify;
-	overflow: hidden;
-	transform-origin: 50% 100%;
-	transform: perspective(300px) rotateX(25deg);
-}
-
-#explanation:after
-{
-	position: absolute;
-	content: ' ';
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 60%;
-	background-image: linear-gradient(top, rgba(0,0,0,1) 0%, transparent 100%);
-	pointer-events: none;
-}
-
-
-#explanation {
-	position: absolute;
-	top: 100%;
-	animation: scroll 100s linear 4s infinite;
-}
-
-
-@keyframes scroll {
-	0% { top: 100%; }
-	100% { top: -170%; }
 }
