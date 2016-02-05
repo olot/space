@@ -44,10 +44,9 @@ body	{
 
 .container2 {
     margin: 300px 100px 30px 100px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.38);
     border: none;
     border-radius: 25px;
-    opacity: 0;
     filter: alpha(opacity=60); /* For IE8 and earlier */
 
 }
@@ -62,6 +61,12 @@ body	{
 @keyframes animatedBackground {
 	from { background-position: 0 0; }
 	to { background-position: 100% 0; }
+}
+
+#rocket {
+  width: 60px;
+  height: 64px;
+cursor: pointer;
 }
 
 img {
